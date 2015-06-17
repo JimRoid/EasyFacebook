@@ -16,6 +16,10 @@ public class Post {
         this.jsonObject = jsonObject;
     }
 
+    public void Updata(JSONObject jsonObject){
+        this.jsonObject = jsonObject;
+    }
+
     public boolean isTag() {
         if (getMessage().indexOf("#") >= 0) {
             return true;
