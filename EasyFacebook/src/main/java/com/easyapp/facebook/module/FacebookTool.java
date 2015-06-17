@@ -41,6 +41,8 @@ public class FacebookTool {
     }
 
     /**
+     * 取得讚
+     *
      * @param object_id
      * @param callback
      */
@@ -54,6 +56,8 @@ public class FacebookTool {
     }
 
     /**
+     * 發送讚
+     *
      * @param object_id
      * @param callback
      */
@@ -100,7 +104,7 @@ public class FacebookTool {
         graphRequest.executeAsync();
     }
 
-    public void getFeed(String id,Bundle bundle, Callback callback) {
+    public void getFeed(String id, Bundle bundle, Callback callback) {
         GraphRequest graphRequest = new GraphRequest(AccessToken.getCurrentAccessToken(),
                 "/" + id + "/feed",
                 bundle,
@@ -113,6 +117,15 @@ public class FacebookTool {
         Bundle bundle = new Bundle();
         GraphRequest graphRequest = new GraphRequest(AccessToken.getCurrentAccessToken(),
                 "/" + id + "/feed",
+                bundle,
+                HttpMethod.GET,
+                DefaultCallback(callback));
+        graphRequest.executeAsync();
+    }
+
+    public void getPost(String id,Bundle bundle, Callback callback) {
+        GraphRequest graphRequest = new GraphRequest(AccessToken.getCurrentAccessToken(),
+                "/" + id,
                 bundle,
                 HttpMethod.GET,
                 DefaultCallback(callback));
@@ -140,7 +153,7 @@ public class FacebookTool {
                 arrayList);
     }
 
-    private  GraphRequest.GraphJSONObjectCallback DefaultGraphJSONObjectCallback(final Callback callback){
+    private GraphRequest.GraphJSONObjectCallback DefaultGraphJSONObjectCallback(final Callback callback) {
         return new GraphRequest.GraphJSONObjectCallback() {
             @Override
             public void onCompleted(JSONObject jsonObject, GraphResponse graphResponse) {
