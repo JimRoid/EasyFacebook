@@ -24,6 +24,10 @@ public class Post {
         }
     }
 
+    public String getId(){
+        return jsonObject.optString("id");
+    }
+
     public String getMessage() {
         return jsonObject.optString("message");
     }
