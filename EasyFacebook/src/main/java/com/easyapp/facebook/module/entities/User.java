@@ -11,6 +11,9 @@ public class User {
     private JSONObject jsonObject;
 
     public User(JSONObject jsonObject) {
+        if (jsonObject == null) {
+            jsonObject = new JSONObject();
+        }
         this.jsonObject = jsonObject;
     }
 
