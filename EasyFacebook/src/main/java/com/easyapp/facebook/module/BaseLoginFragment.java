@@ -3,6 +3,7 @@ package com.easyapp.facebook.module;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import com.easyapp.facebook.module.callback.Facebook_ShareDialog;
 import com.easyapp.facebook.module.callback.Facebook_callback_manager;
 import com.facebook.FacebookCallback;
 import com.facebook.login.LoginManager;
@@ -16,12 +17,15 @@ import java.util.List;
  */
 public abstract class BaseLoginFragment extends Fragment {
     protected Facebook_callback_manager facebook_callback_manager;
+    protected Facebook_ShareDialog facebook_shareDialog;
+
 
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
             facebook_callback_manager = (Facebook_callback_manager) activity;
+            facebook_shareDialog = (Facebook_ShareDialog) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnHeadlineSelectedListener");
@@ -53,4 +57,6 @@ public abstract class BaseLoginFragment extends Fragment {
     protected void FB_Logout() {
         LoginManager.getInstance().logOut();
     }
+
+
 }
