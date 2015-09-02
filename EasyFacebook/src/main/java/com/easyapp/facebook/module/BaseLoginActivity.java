@@ -3,7 +3,7 @@ package com.easyapp.facebook.module;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import com.easyapp.baseproject.lib.BaseSupportActivity;
 import com.easyapp.facebook.module.callback.Facebook_ShareDialog;
 import com.easyapp.facebook.module.callback.Facebook_callback_manager;
 import com.facebook.*;
@@ -19,7 +19,7 @@ import java.util.Arrays;
 /**
  * 基本的登入 fb 的 activity
  */
-public abstract class BaseLoginActivity extends AppCompatActivity implements Facebook_callback_manager, Facebook_ShareDialog {
+public abstract class BaseLoginActivity extends BaseSupportActivity implements Facebook_callback_manager, Facebook_ShareDialog {
     protected CallbackManager callbackManager;
     protected ShareDialog shareDialog;
 

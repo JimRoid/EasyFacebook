@@ -2,7 +2,7 @@ package com.easyapp.facebook.module;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
+import com.easyapp.baseproject.lib.BaseSupportFragment;
 import com.easyapp.facebook.module.callback.Facebook_ShareDialog;
 import com.easyapp.facebook.module.callback.Facebook_callback_manager;
 import com.facebook.FacebookCallback;
@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * 基本的 fb 登入 fragment
  */
-public abstract class BaseLoginFragment extends Fragment {
+public abstract class BaseLoginFragment extends BaseSupportFragment {
     protected Facebook_callback_manager facebook_callback_manager;
     protected Facebook_ShareDialog facebook_shareDialog;
 
