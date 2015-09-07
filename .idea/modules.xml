@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/EasyFacebook.iml" filepath="$PROJECT_DIR$/EasyFacebook.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EasyFacebook/EasyFacebook-EasyFacebook.iml" filepath="$PROJECT_DIR$/EasyFacebook/EasyFacebook-EasyFacebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyFacebook/EasyFacebook.iml" filepath="$PROJECT_DIR$/EasyFacebook/EasyFacebook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyfacebook.iml" filepath="$PROJECT_DIR$/easyfacebook.iml" />
     </modules>
   </component>
 </project>

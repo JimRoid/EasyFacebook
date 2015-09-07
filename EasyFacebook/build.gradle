@@ -20,7 +20,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
     }
 
     compileOptions {
@@ -63,9 +63,9 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository url: "file://${repo.absolutePath}"
-            pom.version = '1.0.0'             // version
-            pom.groupId = 'com.easyapp.facebook.module'    // ????¦W
-            pom.artifactId = 'easyfacebook' // ?????¦W
+            pom.version = '1.0.1'             // version
+            pom.groupId = 'com.easyapp.facebook.module'    // ????ï¿½W
+            pom.artifactId = 'easyfacebook' // ?????ï¿½W
         }
     }
 }

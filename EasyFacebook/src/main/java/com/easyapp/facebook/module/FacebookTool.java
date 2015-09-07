@@ -30,14 +30,16 @@ public class FacebookTool {
     }
 
 
-    public void getMe(Bundle bundle, Callback callback) {
+    public static String getFaceBookImageUrl(String id) {
+        return "https://graph.facebook.com/" + id + "/picture?type=large";
+    }
 
+    public void getMe(Bundle bundle, Callback callback) {
         GraphRequest request = GraphRequest.newMeRequest(
                 AccessToken.getCurrentAccessToken(), DefaultGraphJSONObjectCallback(callback)
         );
         request.setParameters(bundle);
         request.executeAsync();
-
     }
 
     /**
