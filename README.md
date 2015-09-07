@@ -5,18 +5,18 @@
 
 ### install ###
 
-<pre>
+
+
+```
+#!java
 repositories {
     maven {
         url 'https://github.com/JimRoid/EasyFacebook/raw/master/'
     }
 }
-</pre>
-<pre>
+
 dependencies {
     compile 'com.easyapp.facebook.module:easyfacebook:1.0.0'
 }
-</pre>
 
-
-
+```
